@@ -1,5 +1,6 @@
 
-import { Role } from "@prisma/client";
+// Define the Role enum locally if we don't have access to Prisma's generated types
+type Role = 'ADMIN' | 'MANAGER' | 'ANALYST' | 'USER';
 
 // Simple utility functions for role-based access control
 export function isAdmin(role: Role | undefined): boolean {
