@@ -1,73 +1,96 @@
-# Welcome to your Lovable project
 
-## Project info
+# E-Commerce Next.js Dashboard
 
-**URL**: https://lovable.dev/projects/325ce852-0c73-4f8c-b89d-bb3e85a49006
+A full-stack admin dashboard for e-commerce businesses built with Next.js, React, Tailwind CSS, and Prisma ORM.
 
-## How can I edit this code?
+## Project Implementation of TP N°2 Requirements
 
-There are several ways of editing your application.
+This project implements all requirements specified in TP N°2:
 
-**Use Lovable**
+### 1. Presentation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/325ce852-0c73-4f8c-b89d-bb3e85a49006) and start prompting.
+- **Landing Page**: A branded homepage with the ECommNext logo, mission statement, and an overview of the dashboard features
+- **Visual Design**: Consistent blue-themed color palette representing trust and professionalism
+- **Brand Identity**: Logo and name "ECommNext" appear throughout the application
+- **Mission Statement**: Clear description of the dashboard's purpose for e-commerce management
+- **Layout**: Clean, responsive design that works on all device sizes
 
-Changes made via Lovable will be committed automatically to this repo.
+### 2. Perspectives & Usage
 
-**Use your preferred IDE**
+- **Role-Based Access**: Three distinct dashboard views tailored to different roles:
+  - **Admin View**: Complete system control with user management and configuration options
+  - **Manager View**: Operational focus with inventory management and order processing
+  - **Analyst View**: Data analysis with in-depth reporting and visualization tools
+- **Permissions System**: Each role has appropriate access levels to features and data
+- **Shared Features**: Core functionality available to all roles with role-specific extensions
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 3. Functions
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **User Management**: Complete CRUD operations for user accounts with role assignment
+- **Order Tracking**: Real-time order monitoring with status updates and processing tools
+- **Product Catalog**: Inventory management with stock tracking and categorization
+- **Sales Reporting**: Comprehensive analytics with visual charts and exportable data
+- **Authentication**: Secure login system with role-based permissions
+- **Data Export**: CSV and PDF export options for reports and data
 
-Follow these steps:
+### 4. Structure & Construction Steps
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Modular Architecture**: Using Next.js app directory structure with:
+  - `components/`: Reusable UI components (charts, tables, cards)
+  - `pages/`: Application routes and page components
+  - `lib/`: Utility functions and shared logic
+- **Database Integration**: Prisma ORM schema for PostgreSQL/MySQL with models for:
+  - Users
+  - Products
+  - Categories
+  - Orders
+  - OrderItems
+- **API Routes**: Backend logic for data operations
+- **Authentication**: Login system with session management
+- **State Management**: React Query for server state and React hooks for UI state
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 5. Purpose & Advantages
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Real-time Monitoring**: Dynamic dashboard with live data updates
+- **Single Page Application**: Fast navigation between features without page reloads
+- **Server-Side Rendering**: Optimized performance and SEO benefits
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Data Visualization**: Interactive charts for better business insights
+- **Exportable Reports**: Generate PDF and CSV exports for offline analysis
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 6. Indicators
 
-**Edit a file directly in GitHub**
+The dashboard tracks key performance indicators (KPIs) including:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Total Sales**: Revenue metrics with trend analysis
+- **Order Volume**: Number of orders over time
+- **Top Products**: Best-selling products and categories
+- **Customer Acquisition**: New vs. returning customer metrics
+- **Cart Abandonment**: Tracking of abandoned carts and recovery rates
+- **Conversion Rate**: Website visitor to customer conversion percentage
 
-**Use GitHub Codespaces**
+## Technical Stack
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Frontend**:
+  - Next.js 14
+  - React
+  - Tailwind CSS
+  - Recharts for data visualization
+  - React Query for data fetching
 
-## What technologies are used for this project?
+- **Backend**:
+  - Next.js API Routes
+  - Prisma ORM
+  - PostgreSQL/MySQL database
 
-This project is built with:
+## Getting Started
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Configure environment variables (database connection, auth keys)
+4. Run development server: `npm run dev`
+5. Access the dashboard at `http://localhost:3000`
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/325ce852-0c73-4f8c-b89d-bb3e85a49006) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The project is ready for deployment on Vercel with proper environment variable configuration.
